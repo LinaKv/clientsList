@@ -8,7 +8,7 @@ const Commons = ({ match }) => {
             <Switch>
                 <Route path={`${match.url}/settings`} component={lazy(() => import(`./settings`))} />
                 <Route path={`${match.url}/mobileApp`} component={lazy(() => import(`./mobileApp`))} />
-                <Route path={`${match.url}/logs`} component={lazy(() => import(`./logs`))} />
+                <Route path={`${match.url}/logs`} component={lazy(() => import(`./logsToNav`))} />
                 <Redirect from={`${match.url}`} to={`${match.url}/default`} />
             </Switch>
         </Suspense>
