@@ -1,4 +1,4 @@
-# React + Vite
+# React
 
 ### Stack:
 JavaScript, CSS, React, redux, axios, react-router-dom, antd
