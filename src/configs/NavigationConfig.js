@@ -1,0 +1,206 @@
+import {
+    DashboardOutlined,
+    ShoppingCartOutlined,
+    ShoppingOutlined,
+    UserOutlined,
+    PictureOutlined,
+    GiftOutlined,
+    ShopOutlined,
+    UsergroupAddOutlined,
+    MailOutlined,
+    SettingOutlined,
+    MobileOutlined,
+    FileTextOutlined,
+} from '@ant-design/icons';
+import { APP_PREFIX_PATH } from 'configs/AppConfig';
+
+const dashBoardNavTree = [
+    {
+        key: 'common',
+        path: `${APP_PREFIX_PATH}/home`,
+        title: 'Общее',
+        icon: DashboardOutlined,
+        breadcrumb: false,
+        submenu: [
+            {
+                key: 'home',
+                path: `${APP_PREFIX_PATH}/home`,
+                title: 'Дашборд',
+                icon: DashboardOutlined,
+                breadcrumb: false,
+                submenu: [],
+            },
+            {
+                key: 'catalog',
+                path: `${APP_PREFIX_PATH}/common/catalog`,
+                title: 'Каталог',
+                icon: ShoppingCartOutlined,
+                breadcrumb: false,
+                submenu: [
+                    {
+                        key: 'goods',
+                        path: `${APP_PREFIX_PATH}/common/catalog/goods`,
+                        title: 'Товары',
+                        icon: '',
+                        breadcrumb: false,
+                        submenu: [],
+                    },
+                    {
+                        key: 'categories',
+                        path: `${APP_PREFIX_PATH}/common/catalog/categories`,
+                        title: 'Категории',
+                        icon: '',
+                        breadcrumb: false,
+                        submenu: [],
+                    },
+                    {
+                        key: 'collections',
+                        path: `${APP_PREFIX_PATH}/common/catalog/collections`,
+                        title: 'Коллекции',
+                        icon: '',
+                        breadcrumb: false,
+                        submenu: [],
+                    },
+                    {
+                        key: 'combo',
+                        path: `${APP_PREFIX_PATH}/common/catalog/combo`,
+                        title: 'Комбо',
+                        icon: '',
+                        breadcrumb: false,
+                        submenu: [],
+                    },
+                ],
+            },
+            {
+                key: 'orders',
+                path: `${APP_PREFIX_PATH}/common/orders`,
+                title: 'Заказы',
+                icon: ShoppingOutlined,
+                breadcrumb: false,
+                submenu: [],
+            },
+            {
+                key: 'clients',
+                path: `${APP_PREFIX_PATH}/common/clients`,
+                title: 'Клиенты',
+                icon: UserOutlined,
+                breadcrumb: false,
+                submenu: [
+                    {
+                        key: 'clientsList',
+                        path: `${APP_PREFIX_PATH}/common/clients/clientsList`,
+                        title: 'Список клиентов',
+                        icon: '',
+                        breadcrumb: false,
+                        submenu: [],
+                    },
+                    {
+                        key: 'clientsGroups',
+                        path: `${APP_PREFIX_PATH}/common/clients/clientsGroups`,
+                        title: 'Группы клиентов',
+                        icon: '',
+                        breadcrumb: false,
+                        submenu: [],
+                    },
+                ],
+            },
+            {
+                key: 'banners',
+                path: `${APP_PREFIX_PATH}/common/banners`,
+                title: 'Баннеры',
+                icon: PictureOutlined,
+                breadcrumb: false,
+                submenu: [],
+            },
+            {
+                key: 'promotionalСodes',
+                path: `${APP_PREFIX_PATH}/common/promotionalСodes`,
+                title: 'Промокоды',
+                icon: GiftOutlined,
+                breadcrumb: false,
+                submenu: [],
+            },
+            {
+                key: 'offlineShop',
+                path: `${APP_PREFIX_PATH}/common/offlineShop`,
+                title: 'Оффлайн точки',
+                icon: ShopOutlined,
+                breadcrumb: false,
+                submenu: [
+                    {
+                        key: 'addresses',
+                        path: `${APP_PREFIX_PATH}/common/offlineShop/addresses`,
+                        title: 'Адреса',
+                        icon: '',
+                        breadcrumb: false,
+                        submenu: [],
+                    },
+                    {
+                        key: 'geofences',
+                        path: `${APP_PREFIX_PATH}/common/offlineShop/geofences`,
+                        title: 'Геозоны',
+                        icon: '',
+                        breadcrumb: false,
+                        submenu: [],
+                    },
+                ],
+            },
+            {
+                key: 'employees',
+                path: `${APP_PREFIX_PATH}/common/employees`,
+                title: 'Сотрудники',
+                icon: UsergroupAddOutlined,
+                breadcrumb: false,
+                submenu: [],
+            },
+            {
+                key: 'mailings',
+                path: `${APP_PREFIX_PATH}/common/mailings`,
+                title: 'Рассылки',
+                icon: MailOutlined,
+                breadcrumb: false,
+                submenu: [],
+            },
+        ],
+    },
+];
+
+const systemNavTree = [
+    {
+        key: 'system',
+        path: `${APP_PREFIX_PATH}/system`,
+        title: 'Системные',
+        icon: DashboardOutlined,
+        breadcrumb: false,
+        submenu: [
+            {
+                key: 'settings',
+                path: `${APP_PREFIX_PATH}/system/settings`,
+                title: 'Настройки',
+                icon: SettingOutlined,
+                breadcrumb: false,
+                submenu: [],
+            },
+            {
+                key: 'mobileApp',
+                path: `${APP_PREFIX_PATH}/system/mobileApp`,
+                title: 'Мобильное приложение',
+                icon: MobileOutlined,
+                breadcrumb: false,
+                submenu: [],
+            },
+            {
+                key: 'logs',
+                path: `${APP_PREFIX_PATH}/system/logs`,
+                title: 'Логи',
+                icon: FileTextOutlined,
+                breadcrumb: false,
+                submenu: [],
+            },
+        ],
+    },
+];
+
+const navigationConfig = [...dashBoardNavTree, ...systemNavTree];
+
+export default navigationConfig;
